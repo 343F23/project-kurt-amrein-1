@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Baseball Splog</title>
+  <link rel="stylesheet" href="css/basestyle.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="index.html">
+      <h3 class="top-splog">Splog</h3>
+    </a>
+    <div class="sport-btn">
+      <button class="baseball-btn" type="button" onclick="window.location.href = 'baseball.html';">Baseball</button>
+      <button class="basketball-btn" type="button"
+        onclick="window.location.href = 'basketball.html';">Basketball</button>
+      <button class="football-btn" type="button" onclick="window.location.href = 'football.html';">Football</button>
+      <button class="hockey-btn" type="button" onclick="window.location.href = 'hockey.html';">Hockey</button>
+    </div>
+    <form>
+      <div class="searchbar-btn">
+        <label for="searchbar">Search for Splogs:</label>
+        <input id="searchbar" class="searchbar" type="text" placeholder="Find another Splog">
+        <button class="search" type="button" onclick="">Search</button>
+      </div>
+    </form>
+  </nav>
+  <div class="middler">
+    <aside class="lefter">
+      <img
+        src="https://media.istockphoto.com/id/182465444/photo/number-one.jpg?s=612x612&w=0&k=20&c=qN4l_P1Uvw7eqDn0SLkXPJgp7ANoZkjZNjFCDH47bZY="
+        alt="fans-cheering" class="fans-cheering-left">
+    </aside>
+    <main class="main-splog">
+      <div class="transbox">
+        <h1 class="main-title">Baseball</h1>
+        <div class="questions">
+          <div class="name-title">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" placeholder="Enter a name" required>
+            <label for="title">Title:</label>
+            <input id="title" type="text" name="title" placeholder="Enter a title" required>
+          </div>
+          <label for="splog">Write splog here:</label>
+          <textarea id="splog" name="splog" placeholder="Write your splog here" required></textarea>
+        </div>
+      </div>
+    </main>
+    <aside class="righter">
+      <img
+        src="https://media.istockphoto.com/id/182465444/photo/number-one.jpg?s=612x612&w=0&k=20&c=qN4l_P1Uvw7eqDn0SLkXPJgp7ANoZkjZNjFCDH47bZY="
+        alt="fans-cheering" class="fans-cheering-right">
+    </aside>
+  </div>
+  <footer class="foot">
+    <div class="foot-content">
+      <h2 class="foot-title">Splog</h2>
+      <p class="foot-info">
+        <a href="https://www.mlb.com/">Baseball Info</a>
+        |
+        <a href="https://www.nba.com/">Basketball Info</a>
+        |
+        <a href="https://www.nfl.com/">Football Info</a>
+        |
+        <a href="https://www.nhl.com/">Hockey Info</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
