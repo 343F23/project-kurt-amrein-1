@@ -212,6 +212,10 @@ ul{
   border-radius: 8px;
   margin-right: 20px;
 }
+
+.dropdown{
+  display: none;
+}
 /*This is for the index.html and it supports a layout for small screens.*/
 @media screen and (max-width: 768px){
   .middler{
@@ -256,11 +260,6 @@ ul{
     font-size: 18px;
   }
 
-  .sport-btn{
-    flex-direction: column;
-    align-items: center;
-  }
-
   .lefter, .righter{
     display: none;
   }
@@ -269,9 +268,55 @@ ul{
     font-size: 16px;
   }
 
-  .sport-btn{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+  
+  .sport-btn {
+    display: none; /* Hide the regular buttons */
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 10px;
+    margin-bottom: auto;
+  }
+
+  .dropdown-select {
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: white;
+    z-index: 2; /* Set a higher z-index to bring it in front of the transparent box */
+  }
+
+  .dropdown-options {
+    display: none;
+    position: static;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3; /* Set a higher z-index to bring it in front of the transparent box */
+  }
+
+  .dropdown-options a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-options a:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Show dropdown options when the select button is clicked */
+  .dropdown.open .dropdown-options {
+    display: block;
   }
 }
+

@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Baseball Splog</title>
+  <title>Basketball Splog</title>
   <link rel="stylesheet" href="css/basketstyle.css">
+  <script src="javascript/sportscript.js"></script>
 </head>
 
 <body>
@@ -12,6 +13,15 @@
     <a href="index.html">
       <h3 class="top-splog">Splog</h3>
     </a>
+    <div class="dropdown">
+      <button class="dropdown-select">Select Sport</button>
+      <div class="dropdown-options">
+        <a href="baseball.html">Baseball</a>
+        <a href="basketball.html">Basketball</a>
+        <a href="football.html">Football</a>
+        <a href="hockey.html">Hockey</a>
+      </div>
+    </div>
     <div class="sport-btn">
       <button class="baseball-btn" type="button" onclick="window.location.href = 'baseball.html';">Baseball</button>
       <button class="basketball-btn" type="button"
@@ -23,7 +33,7 @@
       <div class="searchbar-btn">
         <label for="searchbar">Search for Splogs:</label>
         <input id="searchbar" class="searchbar" type="text" placeholder="Find another Splog">
-        <button class="search" type="button" onclick="">Search</button>
+        <button class="search" type="button" onclick="search()">Search</button>
       </div>
     </form>
   </nav>
@@ -36,6 +46,7 @@
     <main class="main-splog">
       <div class="transbox">
         <h1 class="main-title">Basketball</h1>
+        <button class="clear-data-btn" onclick="clearData()">Clear Data</button>
         <div class="questions">
           <div class="name-title">
             <label for="name">Name:</label>
@@ -45,6 +56,8 @@
           </div>
           <label for="splog">Write splog here:</label>
           <textarea id="splog" name="splog" placeholder="Write your splog here" required></textarea>
+          <button class="post-btn" onclick="postSplog()">Post</button>
+          <div id="posts-container"></div>
         </div>
       </div>
     </main>
