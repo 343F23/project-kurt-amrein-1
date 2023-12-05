@@ -5,9 +5,10 @@ body {
   min-height: 100vh;
 }
 
-header, footer {
+header,
+footer {
   background-color: green;
-  
+
 }
 
 .middler {
@@ -26,16 +27,20 @@ main {
   flex-basis: 0;
 }
 
-main, aside, header, footer {
+main,
+aside,
+header,
+footer {
   padding: 0
 }
 
-.fans-cheering-left, .fans-cheering-right{
+.fans-cheering-left,
+.fans-cheering-right {
   max-width: 100%;
   height: 100%;
 }
 
-.navbar{
+.navbar {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -43,52 +48,52 @@ main, aside, header, footer {
   margin: 0;
   position: sticky;
   background-color: green;
-  
+
 }
 
-.navbar .searchbar{
+.navbar .searchbar {
   display: flex;
   margin-right: 10px;
-  
+
   margin-bottom: 0px;
   height: 25px;
 }
 
-.searchbar-btn{
+.searchbar-btn {
   display: flex;
   align-items: center;
-  
-  
+
+
 }
 
-.search{
+.search {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 10px;
-  
+
   height: 30px;
   border-radius: 8px;
 }
 
-.search:hover{
+.search:hover {
   background-color: red;
   color: white;
 }
 
-.top-splog{
+.top-splog {
   font-family: Papyrus;
   margin-left: 10px;
   color: white;
 }
 
-.main-splog{
+.main-splog {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   background-image: url("https://media.istockphoto.com/id/1171529630/vector/vector-blue-sport-balls-seamless-pattern-or-background.jpg?s=612x612&w=0&k=20&c=opSXebxsbelKFUMWjr4D26yLQdLx9uirdawzwN_xUw4=");
-   
+
 }
 
-div.transbox{
+div.transbox {
   margin: 30px;
   background-color: #ffffff;
   border: 1px solid black;
@@ -96,44 +101,44 @@ div.transbox{
   width: 1000px;
 }
 
-.main-title{
+.main-title {
   display: flex;
   justify-content: center;
   font-family: Papyrus;
   opacity: 1;
   font-size: 100px;
   margin-top: 10px;
-  
+
 }
 
-.questions{
+.questions {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: start;
   font-family: Georgia;
   margin-top: auto;
-  
+
 }
 
-.name-title{
+.name-title {
   display: flex;
   width: 100%;
   max-width: 400px;
 }
 
-.name-title input{
+.name-title input {
   flex: 1;
   padding: 5px;
   margin: 5px;
   font-family: Georgia;
 }
 
-.searchbar-btn label{
+.searchbar-btn label {
   color: white;
 }
 
-.questions textarea{
+.questions textarea {
   width: 100%;
   max-width: 400px;
   height: 300px;
@@ -143,35 +148,37 @@ div.transbox{
   font-family: Georgia;
 }
 
-.blog-post{
+.blog-post {
   border: 1px solid #ddd;
   padding: 10px;
   margin-top: 10px;
   background-color: #f9f9f9;
 }
+
 /*This supports distinct layouts for small screens.*/
-@media screen and (max-width: 768px){
-  .name-title{
+@media screen and (max-width: 768px) {
+  .name-title {
     flex-direction: column;
   }
 
-  .name-title input{
+  .name-title input {
     width: 200px;
   }
-  .questions textarea{
+
+  .questions textarea {
     width: 500px;
-    
+
   }
 }
 
-ul{
+ul {
   font-size: 25px;
   padding: auto;
 }
 
 
 
-.sport-btn{
+.sport-btn {
   display: flex;
   margin-top: auto;
   margin-right: auto;
@@ -189,12 +196,12 @@ ul{
 
 }
 
-.baseball-btn:hover{
+.baseball-btn:hover {
   background-color: darkblue;
   color: white;
 }
 
-.basketball-btn{
+.basketball-btn {
   margin-right: 50px;
   transition-duration: 0.4s;
   border-radius: 8px;
@@ -202,12 +209,12 @@ ul{
 
 }
 
-.basketball-btn:hover{
+.basketball-btn:hover {
   background-color: brown;
   color: white;
 }
 
-.football-btn{
+.football-btn {
   margin-right: 50px;
   transition-duration: 0.4s;
   border-radius: 8px;
@@ -215,41 +222,41 @@ ul{
 
 }
 
-.football-btn:hover{
+.football-btn:hover {
   background-color: green;
   color: white;
 }
 
-.hockey-btn{
+.hockey-btn {
   transition-duration: 0.4s;
   border-radius: 8px;
   height: 50px;
 }
 
-.hockey-btn:hover{
-  background-color:black;
+.hockey-btn:hover {
+  background-color: black;
   color: white;
 }
 
-.foot-title{
+.foot-title {
   display: flex;
   font-family: Papyrus;
   color: white;
 }
 
-.foot-content{
+.foot-content {
   display: flex;
   margin-left: 10px;
   justify-content: space-between;
 }
 
-.foot-content .foot-info{
+.foot-content .foot-info {
   font-size: 20px;
   margin-right: 20px;
   color: white;
 }
 
-.foot-info a{
+.foot-info a {
   color: white;
   text-decoration: none;
   background-color: #333;
@@ -258,7 +265,7 @@ ul{
   margin-right: 20px;
 }
 
-.blog-post{
+.blog-post {
   border: 1px solid #ddd;
   padding: 10px;
   margin-top: 10px;
@@ -267,18 +274,18 @@ ul{
   overflow: hidden;
 }
 
-.splog{
+.splog {
   word-wrap: break-word;
   overflow-wrap: break-word;
   max-height: 150px;
   overflow-y: auto;
 }
 
-.dropdown{
+.dropdown {
   display: none;
 }
 
-.clear-data-btn{
+.clear-data-btn {
   position: absolute;
   padding: 5px 10px;
   border: black;
@@ -289,27 +296,27 @@ ul{
 
 }
 
-.clear-data-btn:hover{
+.clear-data-btn:hover {
   background-color: black;
   color: white;
 }
 
 /*This supports distinct layouts for small screens.*/
-@media screen and (max-width: 768px){
-  .middler{
+@media screen and (max-width: 768px) {
+  .middler {
     flex-direction: column;
   }
 
-  .clear-data-btn{
+  .clear-data-btn {
     top: 130px;
     left: 20px;
   }
-  
-  aside{
+
+  aside {
     flex-basis: auto;
   }
 
-  main{
+  main {
     flex-grow: 1;
     flex-basis: auto;
     padding: 20px;
@@ -328,31 +335,32 @@ ul{
     border: none;
   }
 
-  .main-title{
+  .main-title {
     font-family: Papyrus;
     font-size: 32px;
     margin-top: 20px;
   }
 
-  .questions{
+  .questions {
     font-family: Georgia;
     align-items: center;
   }
 
-  ul{
+  ul {
     font-size: 18px;
   }
 
-  .lefter, .righter{
+  .lefter,
+  .righter {
     display: none;
   }
 
-  .foot-content .foot-info{
+  .foot-content .foot-info {
     font-size: 16px;
   }
 
   .sport-btn {
-    display: none; /* Hide the regular buttons */
+    display: none;
   }
 
   .dropdown {
@@ -371,7 +379,7 @@ ul{
     cursor: pointer;
     border: 1px solid #ccc;
     background-color: white;
-    z-index: 2; /* Set a higher z-index to bring it in front of the transparent box */
+    z-index: 2;
   }
 
   .dropdown-options {
@@ -382,7 +390,7 @@ ul{
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 3; /* Set a higher z-index to bring it in front of the transparent box */
+    z-index: 3;
   }
 
   .dropdown-options a {
@@ -396,7 +404,6 @@ ul{
     background-color: #f1f1f1;
   }
 
-  /* Show dropdown options when the select button is clicked */
   .dropdown.open .dropdown-options {
     display: block;
   }
