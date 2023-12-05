@@ -5,7 +5,7 @@ function httpGetAsync(url, callback) {
       callback(xmlHttp.responseText);
     }
   };
-  xmlHttp.open("GET", url, true); 
+  xmlHttp.open("GET", url, true);
   xmlHttp.send(null);
 }
 
@@ -58,11 +58,28 @@ function displayBlogPost(post) {
 window.onload = function () {
   var currentPage = window.location.pathname;
   var existingPosts = JSON.parse(localStorage.getItem(currentPage)) || [];
+  var uniquePosts = removeDuplicatePosts(existingPosts);
 
   existingPosts.forEach(function (post) {
     displayBlogPost(post);
   });
 };
+
+/*Removes a post if they are exactly the same*/
+function removeDuplicatePosts(posts) {
+  var uniquePostSet = new Set();
+
+  return posts.filter(function (post) {
+    var postKey = post.title + '|' + post.splog;
+
+    if (!uniquePostSet.has(postKey)) {
+      uniquePostSet.add(postKey);
+      return true;
+    }
+
+    return false;
+  });
+}
 
 /*Post the splog that you are writing*/
 function postSplog() {
@@ -83,12 +100,8 @@ function postSplog() {
     document.getElementById('name').value = '';
     document.getElementById('title').value = '';
     document.getElementById('splog').value = '';
-    
+
     getCurrentTimeAndDisplayPost(post);
-    var currentPage = window.location.pathname;
-    var existingPosts = JSON.parse(localStorage.getItem(currentPage)) || [];
-    existingPosts.push(post);
-    localStorage.setItem(currentPage, JSON.stringify(existingPosts));    
   }
 }
 
@@ -146,7 +159,7 @@ function search() {
 }
 
 /*Clears all the data on that page*/
-function clearData(){
+function clearData() {
   var currentPage = window.location.pathname;
   localStorage.removeItem(currentPage);
   location.reload();
