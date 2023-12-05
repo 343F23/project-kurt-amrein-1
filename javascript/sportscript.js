@@ -80,6 +80,10 @@ function postSplog() {
       splog: splog,
     };
 
+    document.getElementById('name').value = '';
+    document.getElementById('title').value = '';
+    document.getElementById('splog').value = '';
+    
     getCurrentTimeAndDisplayPost(post);
     var currentPage = window.location.pathname;
     var existingPosts = JSON.parse(localStorage.getItem(currentPage)) || [];
